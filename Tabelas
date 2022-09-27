@@ -1,0 +1,40 @@
+create database locadora;
+
+use locadora;
+
+create table veiculo(
+marca varchar(255),
+cor varchar(255),
+modelo varchar(255),
+combustivel varchar(255),
+descricao varchar(255),
+placa varchar(255),
+primary key(placa)
+);
+
+
+create table cliente(
+cpf varchar (255),
+endereco varchar(255),
+nome varchar(255),
+telefone varchar(255),
+email varchar(255),
+data_Nasc date,
+idade int,
+primary key(cpf)
+);
+
+create table contrato(
+data_Contrato date,
+preco_diaria int,
+valor_do_seguro int,
+numero_do_contrato int,
+primary key (numero_do_contrato)
+);
+
+create table manutencao(
+custo_mensal double,
+data_manutencao date,
+ID_manutencao int,
+primary key (ID_manutencao)
+);
